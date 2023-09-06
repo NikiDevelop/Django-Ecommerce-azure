@@ -1,0 +1,16 @@
+{% extends "ProyectoWebApp/base.html" %} 
+{% load static %} 
+{% block content %} 
+<a href="/blog/" class="fa fa-arrow-left"
+  style="margin-left: 20%; margin-top: 5%; font-size: 39px; text-decoration: none;">
+</a>
+<div style="text-align: left;">
+  <h1 style="text-align: center; margin-top: -2%; margin-bottom: 4%;  color: rgb(10, 19, 19);">{{post.titulo}}</h1>
+  <h2 class="my-2 h5 text-muted">{{post.date|date:'F jS Y'}}</h2>
+  <div class="" style="margin: 0 auto;padding-top: 3%;  border-radius: 20px;">
+    <img src="{{post.imagen.url}}" alt="{{post.titulo}}" class="img-fluid"
+      style="width: 500px; height: auto; margin-left: 20%; margin-right: 20%; margin-bottom: 5%;">
+    <p style="margin-left: 20%; margin-right: 20%; margin-bottom: 8%;">{{post.contenido|safe}}</p>
+  </div>
+</div> 
+{% endblock %}

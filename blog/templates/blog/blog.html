@@ -1,0 +1,61 @@
+
+{% extends "ProyectoWebApp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+<link href="{% static 'ProyectoWebApp/css/blog.css' %}" rel="stylesheet">
+
+
+<div style="background-color: #d1d0d7;">
+<div class="container" style="margin: 0 auto;">
+  <div class="row">
+    <div class="col-md-7 search">
+      <form method="get">
+        <div id="custom-search-input">
+          <div class="input-group col-md-7">
+            <input type="text" class="form-control" placeholder="Buscar" name="buscar" 
+            style="border-radius: 20px; color: rgb(255, 165, 0); background-color: #605e5e;">
+            <span class="input-group-list">             
+              <button type="submit" class="btn " style="border-radius:  20px;
+               color: rgb(0, 0, 0); background-color: rgb(255, 165, 0); margin-top: 5%;"
+               >Buscar</button>
+            </span>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% for post in posts %}
+
+<div class="blog py-5"  style="border-radius: 20px;">
+  <div class="container" style="border-radius: 20px;">
+    <div class="row" style="border-radius: 20px;">      
+      <div class="col-md-8 mx-auto px-0 bg-white shadow-sm rounded"  style="border-radius: 20px;">
+        <img class="col-lg-5 col-md-12 float-md-left blog-thumbnail" src="{{post.imagen.url}}"  style="border-radius: 20px;"></img>
+        <div class="col-lg-7 col-md-12 float-md-left" style="border-radius: 20px;">          
+          <div class="p-3 p-sm-5"style="border-radius: 20px;">
+            <div class="mb-4"style="border-radius: 20px;">                
+              <h3 class="mb-4"style="border-radius: 20px;">                
+                <a href="{% url 'post_detail' post.id %}" class="text-dark">{{post.titulo|truncatechars:17}}</a>
+              </h3>
+              <div class="line"> 
+              <p class="mb-0" style="margin-top: 3%;">
+                {{post.contenido|striptags|truncatechars:50}}
+              </p>
+            </div>                 
+            <a href="{% url 'post_detail' post.id %}" class="" style="color: #b1b0b8;">Leer más...</a>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+  </div>
+</div>
+
+  {% endfor %}
+
+{% endblock %}
+

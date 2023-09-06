@@ -1,0 +1,85 @@
+{% extends "ProyectoWebApp/base.html" %} {% load static %} {% block content %}
+<link href="{% static 'ProyectoWebApp/css/home-card.css' %}" rel="stylesheet">
+<div style="background-color: #f0f0f0;">
+  <div class="header-inicio"></div>
+  <div class="inicio" style="margin-top: -5%;">
+    <h3 class="span loader" style="text-align: center;  margin-top: 5% ;font-family: 'Consistency'; margin-bottom: 5%;">
+      <span class="m">Siente</span>&nbsp;</span><span class="m">la</span>&nbsp;<span class="m">fuerza</span>&nbsp;<span
+        class="m">de</span>&nbsp;<span class="m">la</span>&nbsp; <span class="m">tecno</span><span
+        class="m">logía</span>&nbsp;<span class="m">en</span>&nbsp;<span class="m">tu</span>&nbsp;<span
+        class="m">mano</span></h3>
+  </div>
+  <main id="main" style="margin-bottom: 10%;">
+    <div class="card ">
+      <img src="/static/ProyectoWebApp/img/New-.jpg" alt="imagen">
+      <div class="text">
+        <h2 data-splitting="">
+          <a href="/tienda" style="text-decoration: none;">Smartphones</a>
+        </h2>
+        <p data-splitting="" style="color: rgb(192, 190, 190);">Los Smartphones de última generación ofrecen un
+          rendimiento rápido y fluido gracias a sus procesadores potentes.</p>
+      </div>
+    </div>
+    <div class="card ">
+      <img src="/static/ProyectoWebApp/img/vzq.jpg" alt="imagen">
+      <div class="text">
+        <h2 data-splitting="">Cámaras 4k</h2>
+        <p data-splitting="" style="color: rgb(192, 190, 190);">Las mejores cámaras y más avanzadas del mercado.
+          Inmortaliza el momento.</p>
+      </div>
+    </div>
+    <div class="card ">
+      <img src="/static/ProyectoWebApp/img/jo.jpg" alt="imagen">
+      <div class="text">
+        <h2 data-splitting="">Vídeos 4k</h2>
+        <p data-splitting="" style="color: rgb(192, 190, 190);">Al alcance de tu mano el grabar en alta definición como
+          un profesional.</p>
+      </div>
+    </div>
+    <div class="card ">
+      <img src="/static/ProyectoWebApp/img/acce1.jpg/" alt="imagen">
+      <div class="text">
+        <h2 data-splitting="">
+          <a href="/tienda/accesorios" style="text-decoration: none;">Accesorios</a>
+        </h2>
+        <p data-splitting="" style="color: rgb(192, 190, 190);">Con una gran variedad de opciones de colores y diseños,
+          los accesorios hacen que sea más fácil y cómoda la experencia.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="/static/ProyectoWebApp/img/foto4.jpg/" alt="imagen">
+      <div class="text">
+        <h2 data-splitting="">Top Gaming</h2>
+        <p data-splitting="" style="color: rgb(192, 190, 190);">Los mejores smartphones para el gaming con la mejor
+          tecnología. Con una pantalla de 144Hz y una batería de alta capacidad. </p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="/static/ProyectoWebApp/img/port.jpg/" alt="imagen">
+      <div class="text">
+        <h2 data-splitting="">Creatividad</h2>
+        <p data-splitting="" style="color: rgb(192, 190, 190);">Crea el mejor contenido con la última tecnología para
+          tus redes sociales y presume de el.</p>
+      </div>
+    </div>
+  </main>
+  <div>
+    <div class="footer-divider" style=" width: 70%; margin: 0 auto;"></div>
+    <h1 style="font-family: Consistency; text-align: center; margin-top: 5%; color: rgb(16, 16, 16);">La innovación de
+      la experencia al alcance de tu presupuesto <a href="/tienda/"
+        style="color: rgb(234, 213, 23);text-decoration: none;">soñado</a></h1>
+    <h1
+      style="font-family: 'Consistency';color: rgb(50, 53, 53); margin:  0 auto; text-align: center; font-size: 1.5.5rem; font-size: 35px; padding: 1.1rem 1.1rem; ">
+      Descubre la libertad de hacer más con menos</h1>
+    <ul class="footer-list"
+      style="margin-top: 3%; font-size: 1rem; padding: 1.5rem 1.5rem; text-align: left; margin-left: 20%; margin-right: 10%; font-size: 22px; margin-bottom: 8%;">
+      <li>Procesadores de alta velocidad y eficiencia energética.</li>
+      <li>Cámaras con tecnología avanzada, estabilización óptica de imagen y grabación de videos 4K.</li>
+      <li>Pantalla de alta resolución.</li>
+      <li>Batería de larga duración: Mayor capacidad y eficiencia energética, lo que les permite durar más tiempo la
+        batería.</li>
+      <li>Reconocimiento de huella dactilar y facial.</li>
+    </ul>
+  </div>   
+  {% endblock %}
+</div>

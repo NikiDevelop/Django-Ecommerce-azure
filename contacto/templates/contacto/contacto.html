@@ -1,0 +1,12 @@
+{% extends "ProyectoWebApp/base.html" %} {% load static %} {% block content %} <div style="background-color: #d1d0d7;">
+</div>
+<div class="contacto-img">
+    <div class="form-input-wrapper">
+        <div class="form-input-group"> {% if "valido" in request.GET %} <p style="color: white;">Mensaje enviado,
+                gracias</p> {% endif %} <form action="" method="POST" style="text-align: center;"> {%csrf_token%} <table
+                    style="color: white; margin: 20px auto; margin-top: 100px;">{{miFormulario.as_table}}</table>
+                <input type="submit" value="Enviar" style="width: 150px;">
+            </form>
+        </div>
+    </div>
+</div> {% endblock %}

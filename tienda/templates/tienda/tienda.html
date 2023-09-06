@@ -1,0 +1,93 @@
+{% extends "ProyectoWebApp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+
+<link href="{% static 'ProyectoWebApp/css/tienda.css' %}" rel="stylesheet">
+<div style="background-color: #d1d0d7;">
+<div class="menu" style=" margin-top: 0%;margin-left: 15%;">
+  <a id="boton-menu" class="fa fa-list-ul" style="font-size: 27px;"></a>
+  <ul id="opciones-menu" style="color: white;">
+   <h5><a href="/tienda/" style=" text-decoration: none;">Smartphones</a></h5>
+    <h5><a href="/tienda/?buscar=android" style=" text-decoration: none;">Android</a></h5>
+    <h5><a href="/tienda/?buscar=apple" style=" text-decoration: none;">Apple</a></h5>
+    <h5><a href="/tienda/accesorios" style="text-decoration:none">Accesorios</a></h5>   
+  </ul>
+</div>
+
+<script >var botonMenu = document.getElementById('boton-menu');
+  var opcionesMenu = document.getElementById('opciones-menu');
+  
+  botonMenu.addEventListener('click', function() {
+    opcionesMenu.style.display = opcionesMenu.style.display === 'none' ? 'block' : 'none';
+  });</script>
+
+
+<div class="container" style="margin: 0 auto; " >  
+  <div class="row">   
+    <div class="col-md-7 search">      
+      <form method="get">         
+        <div id="custom-search-input">
+          <div class="input-group col-md-7" style="margin-top: -4.6%;">            
+              <input type="text" class="form-control" placeholder="Buscar" name="buscar" 
+                style="border-radius: 20px; color: rgb(255, 165, 0); background-color: #605e5e;">                                  
+                <span class="input-group-list">                                    
+                  <button type="submit" class="btn " style="border-radius:  20px;
+               color: rgb(0, 0, 0); background-color: rgb(255, 165, 0);margin-top: 5%; "
+               >Buscar</button>
+                </span>                
+          </div>
+        </div> 
+      </form>
+    </div>
+  </div>
+</div>
+
+  <!-- Carro desactivado actualmente -->
+  <!--El carro está deshabilitado temporalmente-->
+ <!-- <div style="float:right;">
+    {% if request.user.is_authenticated%}
+      {% include "carro/widget.html" %}  
+    {% else%}
+    <div class="alert alert-primary d-flex align-items-left" role="alert" style="margin-left: 20%; width: 100%;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+      </svg>
+      <div> 
+        Login para ver carro
+      </div> 
+    </div>
+      {% endif %}
+  </div> -->
+ 
+ <div>
+  <h2 style="text-align: center; margin-top: 5%; color: rgb(14, 14, 13);">Aspect Phone</h2>
+ </div>
+ <div class="footer-divider" style="width: 74%; margin: 0 auto;"></div>
+  <div class="row" style="max-width: 100%;padding: 5% 10% ">
+
+    {% for producto in productos %}
+        <div class="col-md-3" >
+            <div class="card" style="width: 70%; border-radius: 20px; align-items: center; margin: 0 auto; 
+                margin-top: 30%; margin-bottom: 20%; height: 500px;">
+                <img src="{{producto.imagen.url}}" class="img-fluid" style="border-radius: 20px;height: 300px; margin: 0 auto;">
+                <div class="card-body" style="text-align: center;">    
+                <h4 class="card-title"style="text-align: center;">{{producto.nombre|truncatechars:28}}</h4>    
+                <p class="card-text" >{{producto.precio}}&nbsp;€</p>       
+            </div>                      
+              <a href="{{ producto.url }}" class="btn " target="__blank"
+              style="text-align: center;   border-radius: 20px; color: #4e4d4d;
+               background-color: rgb(255, 165, 0); margin-bottom: 5%;" 
+              >
+              <i class="fa fa-amazon"></i>
+              Ver oferta 
+            </a>    
+            </div>
+        </div><!--card que se cierra-->    
+    {% endfor %}
+      </div>     
+    </div>    
+    {% endblock %}
+  </div>
