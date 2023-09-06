@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-nvd8#^ls^sm!#j^o2rix6jh6!i7!+7j_q9#)3h!9wc2k!ayf_d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [] #'.vercel.app', '.now.sh'
+ALLOWED_HOSTS = ['ecommerce-django.azurewebsites.net', 'http://127.0.0.1:8000/'] 
 
 
 # Application definition
