@@ -29,8 +29,6 @@ jobs:
       
       - name: Install dependencies
         run: pip install -r requirements.txt
-
-    
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
       
@@ -62,4 +60,4 @@ jobs:
         with:
           app-name: 'Ecommerce-django'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0DA63B3ACF774E9BA1C5FB1BB613715D }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0042B60B6DE044739652D6BD8144CB3E }}
