@@ -44,7 +44,7 @@
     </div>
   </div>
 </div>
-
+<!--
 <div class="row" style="margin-left:79%; margin-right: 1%;margin-top:2%;">
   <div>
     {% if request.user.is_authenticated%}
@@ -60,7 +60,7 @@
     </div>
       {% endif %}
   </div>
-</div>
+</div>-->
 
  <div>
   <h2 class="" style="text-align: center; margin-top: 2%;margin-right: 38%; color: azure;">Aspect <span style="color: rgb(255,165,0);">Phone</span></h4>
@@ -84,13 +84,7 @@
               >
               <i class="fa fa-amazon"></i>
               Ver oferta 
-            </a> 
-            <a href="{% url 'carro:agregar' producto.id %}" class="btn "
-            style="text-align: center;   border-radius: 20px; color: #4e4d4d;
-             background-color: rgb(255, 165, 0); margin-bottom: 5%; " 
-            >            
-            Agregar al carro
-          </a>        
+            </a>           
             </div>
         </div>  
     {% endfor %}
