@@ -1,4 +1,4 @@
-<table class="table table-bordered" style="color: white; margin-left:  30%;">
+<table class="table table-bordered" style="color: white; margin-bottom:5%;">
 
     <thead>
         <tr>
@@ -18,7 +18,7 @@
         {% if request.session.carro.items %}
             {% for key, value in request.session.carro.items %}
                 <tr class="text-center">
-                    <td>{{value.nombre}}</td>
+                    <td style="font-size: 14px;">{{value.nombre|truncatechars:22}}</td>
                     <td>{{value.cantidad}}</td>
                     <td>
                         <a href="{% url 'carro:agregar' value.producto_id %}" class="btn btn-sm btn-success">+</a>

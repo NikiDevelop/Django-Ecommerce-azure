@@ -10,7 +10,7 @@ urlpatterns = [
     path('post/<int:post_id>/', views.post_detail, name='post_detail'),
 
     path('categoria/<int:categoria_id>', views.categoria, name="categoria"),    
-    #path("search/<str:search_term>",SearchBlogView.as_view()),
+    
 ]
     
 

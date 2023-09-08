@@ -18,7 +18,6 @@ class VRegistro(View):
 
         if form.is_valid():
             usuario = form.save()
-
             login(request, usuario)
             return redirect('Home')
         else:

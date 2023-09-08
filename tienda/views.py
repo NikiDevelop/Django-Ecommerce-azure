@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Producto, Accesorio
 from django.db.models import Q
-#from carro.carro import Carro
+from carro.carro import Carro
 
 
 # Create your views here.
@@ -11,7 +11,7 @@ def tienda(request):
     productos = Producto.objects.all()
     if "buscar" in request.GET:
         queryset = request.GET.get("buscar")
-        #carro=Carro(request)
+        carro=Carro(request)
        
         
         
@@ -37,7 +37,7 @@ def accesorios(request):
     accesorios = Accesorio.objects.all()
     if "buscar" in request.GET:
         queryset = request.GET.get("buscar")
-        #carro=Carro(request)
+        carro=Carro(request)
         
         
         
