@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-nvd8#^ls^sm!#j^o2rix6jh6!i7!+7j_q9#)3h!9wc2k!ayf_d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ecommerce-django.azurewebsites.net', '*'] 
+ALLOWED_HOSTS = ['ecommerce-django2.azurewebsites.net','*'] 
 
 
 # Application definition
@@ -149,7 +149,10 @@ USE_TZ = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> c65e00d493dab2241a75a6dfb4af40f53b657b3f
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT =os.path.join(BASE_DIR, 'media')
