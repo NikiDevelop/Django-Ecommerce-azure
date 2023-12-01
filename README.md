@@ -104,7 +104,7 @@ Nos saldrá un botón que pondrá `Ir al recurso`, le damos.<br>
 Refrescamos la página varias veces. A la derecha nos sale `Dominio predeterminado:.....` ahí es donde está alojada nuestra aplicación le damos y esperamos.<br>
 Por último nos dirigimos a settings de nuestro proyecto y nos vamos a `ALLOWED_HOSTS` y ponemos nuesta url.
 ```
-ALLOWED_HOSTS = ['prueba_azurewebsites.net']
+ALLOWED_HOSTS = ['Django-prueba.azurewebsites.net']
 ```
 Realizamos el push a `GitHub` con los cambios. Asegurate que estes poniendo bien tu branch en mi caso es main. 
 ```
