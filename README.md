@@ -19,7 +19,11 @@ MIDDLEWARE = [
 ]
 ```
 Ahora hay que decirle donde se encuentran los archivos static y media. Nos dirigimos a settings y agregamos el path.
-Cambia `DEBUG = False `
+Cambia `DEBUG = False `<br>
+En `ALLOWED_HOSTS` por ahora agregamos un `*` que luego agregaremos nuestro dominio de la aplicación.
+```
+ALLOWED_HOSTS = [*]
+```
 
 ```
 STATIC_URL = '/static/'
@@ -57,7 +61,18 @@ Ejecutamos `freeze requirements`
 ```
 $pip freeze > requirements.txt
 ```
-Ya tenemos el proyecto listo para hacer el deploy.
+Ya tenemos el proyecto listo para hacer el deploy.<br>
+Ahora tenemos que subir nuestro proyecto a GitHub.
+
+```
+$ git init
+$ git add .
+$ git commit -m "first commit"
+$ git branch -M main
+$ git remote add origin https://github.com/tu_usuario/prueba.git
+$ git push -u origin main
+
+```
 
 # Vamos con Azure
 Nos dirigimos a ["Portal de Azure"](https://portal.azure.com/) tendrás que crearte una cuenta nueva.<br>
@@ -67,12 +82,12 @@ Nos dirigimos a ["Portal de Azure"](https://portal.azure.com/) tendrás que crea
 Después de que te hayas registrado tendría que salirte algo así.
 
 ![Screenshot 2023-12-01 at 16-45-36 Microsoft Azure](https://github.com/NikiDevelop/NikiDevelop/assets/105102619/ad6453da-06ce-4c9f-aca1-96e4a6d4fc62)
-
+<br><br>
 Creamos un nuevo `+ Crear un nuevo recuerso` aquí el nombre que le ponga no importa, puedes ponerle el nombre del proyecto. <br> 
 Ahora le damos a `Aplicación web` y le damos a crear.
 
 ![Captura](https://github.com/NikiDevelop/NikiDevelop/assets/105102619/eebf8c17-8b84-4f7d-863d-462a04ac4bad)
-<br>
+<br><br>
 Nos saldrá la suscripción que tenemos.<br>
 - `Grupo de recursos` el que hemos creado al principo o creamos uno nuevo con el nombre que queramos. <br>
 - `Nombre` le ponemos el nombre que queramos que será la url ejemplo: `Django-prueba-`.azurewebsites.net<br>
@@ -81,6 +96,24 @@ Nos saldrá la suscripción que tenemos.<br>
 - `Región` Te recomiendo que elijas la más cercana.
 Te debería quedar algo así y le damos a `Revisar y crear`
 ![Capturasssss](https://github.com/NikiDevelop/NikiDevelop/assets/105102619/8077cfa9-7fe3-492e-b745-ffaf12c9a78c)
+<br><br>
+Nos dirigimos a `Implementacion`. Nos logueamos con nuestra cuenta de `GitHub` para que nos salga nuestro proyecto y lo seleccionemos. Le damos a `Revisar y crear`<br>
+Azure nos habrá creado una carpeta con un archivo `.github/workflows`/`main_prueba.yml`, Azure automáticamente nos ha creado esta carpeta con un archivo `yml`.<br>
+Esperamos un momento para que Azure termine de realizar todo lo necesario para que nuestra aplicación este lista.<br>
+Nos saldrá un botón que pondrá `Ir al recurso`, le damos.<br>
+Refrescamos la página varias veces. A la derecha nos sale `Dominio predeterminado:.....` ahí es donde está alojada nuestra aplicación le damos y esperamos.<br>
+Por último nos dirigimos a settings de nuestro proyecto y nos vamos a `ALLOWED_HOSTS` y ponemos nuesta url.
+```
+ALLOWED_HOSTS = ['prueba_azurewebsites.net']
+```
+Realizamos el push a `GitHub` con los cambios. Asegurate que estes poniendo bien tu branch en mi caso es main. 
+```
+$ git pull origin main
+$ git add .
+$ git commit -m "add allowed hosts"
+git push origin main
+```
+Nos dirigimos a Azure en `Introducción` y le damos a `Reinicar` y esperemas un rato y nos aplicación ya tendría que estar visible. <br><br>
 
 ## Ejecutar el proyecto
 Lo primero creamos un entorno virtual.
