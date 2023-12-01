@@ -1,6 +1,7 @@
 # Django Ecommerce Deploy Azure
-Una guía como hacer un deploy en Azure y como preparar los archivos static.
 ----------------------------------------------------------
+
+Una guía como hacer un deploy en Azure y como preparar los archivos static.
 
 # Preparamos el proyecto para el Deploy
 Tenemos que entender que Django no sirve los archivos static por eso tenemos que hacer una serie de cosas, le tenemos que decir donde se encuentran los archivos static a la hora de hacer el deploy.
