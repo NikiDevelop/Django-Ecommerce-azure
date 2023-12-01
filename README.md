@@ -90,9 +90,9 @@ Ahora le damos a `Aplicación web` y le damos a crear.
 <br><br>
 Nos saldrá la suscripción que tenemos.<br>
 - `Grupo de recursos` el que hemos creado al principo o creamos uno nuevo con el nombre que queramos. <br>
-- `Nombre` le ponemos el nombre que queramos que será la url ejemplo: `Django-prueba-`.azurewebsites.net<br>
+- `Nombre` le ponemos el nombre que queramos que será la url ejemplo: `Django-prueba`.azurewebsites.net<br>
 - `Publicar` Código en mi caso.<br>
-- `Pila del entorno...` elegimos el lenguaje de nuestra app, en mi caso Python.
+- `Pila del entorno...` elegimos el lenguaje de nuestra app, en mi caso Python y la versión que tengas.
 - `Región` Te recomiendo que elijas la más cercana.
 Te debería quedar algo así y le damos a `Revisar y crear`
 ![Capturasssss](https://github.com/NikiDevelop/NikiDevelop/assets/105102619/8077cfa9-7fe3-492e-b745-ffaf12c9a78c)
