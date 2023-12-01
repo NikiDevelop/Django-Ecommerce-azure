@@ -111,7 +111,7 @@ Realizamos el push a `GitHub` con los cambios. Asegurate que estes poniendo bien
 $ git pull origin main
 $ git add .
 $ git commit -m "add allowed hosts"
-git push origin main
+$ git push origin main
 ```
 Nos dirigimos a Azure en `Introducción` y le damos a `Reinicar` y esperemas un rato y nos aplicación ya tendría que estar visible. <br><br>
 
