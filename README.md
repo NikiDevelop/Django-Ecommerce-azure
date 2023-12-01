@@ -19,7 +19,7 @@ MIDDLEWARE = [
 ]
 ```
 Ahora hay que decirle donde se encuentran los archivos static y media. Nos dirigimos a settings y agregamos el path.
-Cambia `DEBUG = False `<br>
+Cambia `DEBUG = False `.<br>
 En `ALLOWED_HOSTS` por ahora agregamos un `*` que luego agregaremos nuestro dominio de la aplicación.
 ```
 ALLOWED_HOSTS = [*]
