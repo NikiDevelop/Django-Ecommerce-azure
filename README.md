@@ -59,7 +59,7 @@ $ python manage.py collectstatic
 ```
 Ejecutamos `freeze requirements`
 ```
-$pip freeze > requirements.txt
+$ pip freeze > requirements.txt
 ```
 Ya tenemos el proyecto listo para hacer el deploy.<br>
 Ahora tenemos que subir nuestro proyecto a GitHub.
