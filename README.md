@@ -1,5 +1,5 @@
-# Django-Ecommerce-azure
-
+# Django Ecommerce Deploy Azure
+Una guía como hacer un deploy en Azure y como preparar los archivos static.
 ----------------------------------------------------------
 
 # Preparamos el proyecto para el Deploy
