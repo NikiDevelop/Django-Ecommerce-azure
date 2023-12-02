@@ -63,6 +63,7 @@ Ejecutamos `freeze requirements`
 $ pip freeze > requirements.txt
 ```
 Ya tenemos el proyecto listo para hacer el deploy.<br>
+Ve a GitHub y create un nuevo repositorio, y vamos a subir nuestro proyecto desde VsCode.
 Ahora tenemos que subir nuestro proyecto a GitHub.
 
 ```
