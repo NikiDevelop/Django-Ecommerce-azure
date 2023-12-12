@@ -18,6 +18,7 @@ MIDDLEWARE = [
 'whitenoise.middleware.WhiteNoiseMiddleware',
 ...
 ]
+
 ```
 Ahora hay que decirle donde se encuentran los archivos static y media. Nos dirigimos a settings y agregamos el path.
 Cambia `DEBUG = False `.<br>
